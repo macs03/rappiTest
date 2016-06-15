@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  background: #32434C !important;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -57,6 +58,62 @@ body {
 }
 .marketing p + h4 {
   margin-top: 28px;
+}
+
+.news{
+    background: #BDBDBD;
+    padding: 2em;
+}
+.new{
+    padding: 1em 1em 0 1em;
+}
+.new-header{
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: 1em;
+    cursor: pointer;
+}
+.new-header figure img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.new-header h2{
+    font-size: 16px;
+}
+.padding-1em{
+    padding: 1em;
+}
+.new-body{
+    display: flex;
+    margin: 1em 1em 0 1em;
+    background: white;
+}
+.new-body figure{
+    background-position: center;
+    background-size: cover;
+}
+.body h2{
+    font-size: 20px;
+}
+
+.header-section{
+    display: flex;
+    background: #FE5A49;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    color: white;
+    margin-top: 1.5em;
+}
+.header-section i{
+    font-size: 3em;
+    margin-left: 1em;
+    cursor: pointer;
+}
+.header-section .title h2{
+    font-size: 20px;
 }
 
 /* Responsive: Portrait tablets and up */

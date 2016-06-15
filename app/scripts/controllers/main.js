@@ -16,19 +16,31 @@
 
         function MainCtrl($scope, articlesFactory) {
             var vm = this;
-            vm.awesomeThings = [
-                'HTML5 Boilerplate',
-                'AngularJS',
-                'Karma'
-            ];
+            vm.callNews = callNews;
+            vm.titleSelected = "";
+            vm.selectNew = selectNew;
+            vm.news = [];
 
-            articlesFactory
-                .getAll()
-                .then(function (data) {
-                    console.log(data);
-                })
-                .catch(function (err) {
-                    console.log(err);
-                })
+            function callNews() {
+                articlesFactory
+                    .getAll()
+                    .then(function (data) {
+                        console.log(data);
+                        vm.news = data;
+                    })
+                    .catch(function (err) {
+                        console.log(err);
+                    })
+            }
+
+            function selectNew(id) {
+                console.log(id);
+                angular.forEach(vm.news, function(value, key) {
+                    if (value.id == id) {
+                        vm.titleSelected = value.title;
+                    }
+                });
+            }
+
         }
 })();
