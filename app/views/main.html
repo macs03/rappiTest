@@ -1,29 +1,29 @@
 <div class="header-section">
-    <i class="fa fa-bars" aria-hidden="true" ng-click="main.callNews()"></i>
-    <div class="title padding-1em col-xs-10">
-        <h2 ng-cloak>{{main.titleSelected}}</h2>
-    </div>
+  <i class="fa fa-bars" aria-hidden="true" ng-click="main.callNews()"></i>
+  <div class="title padding-1em col-xs-10" ng-class="{'intro-main-title':main.introMainTitle, 'out-main-title' : main.outMainTitle}">
+    <h2 ng-cloak>{{main.titleSelected}}</h2>
+  </div>
 </div>
-<section class="news">
-    <article class="new" ng-repeat="new in main.news">
-        <div class="new-header" ng-click="main.selectNew(new.id)">
-            <figure class="padding-1em col-xs-2" >
-                <img ng-src="{{new.image}}" alt="" />
-            </figure>
-            <div class="title padding-1em col-xs-10">
-                <h2>{{new.title}}</h2>
-            </div>
-        </div>
-        <div class="new-body">
-            <figure class="col-md-4 col-xs-12" ng-style="{'background-image': 'url(' + new.image + ')'}">
-            </figure>
-            <br>
-            <div class="body col-md-8 col-xs-12">
-                <h2>{{new.title}}</h2>
-                <p>
-                    {{new.content}}
-                </p>
-            </div>
-        </div>
-    </article>
+<section class="news panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+  <article class="new panel" ng-repeat="new in main.news" ng-class="{'load-titles':main.loadTitles}">
+    <div class="new-header row panel-heading" role="tab" id="heading{{$index}}" ng-click="main.selectNew(new.id)">
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+        <figure class="padding-1em col-xs-2">
+          <img ng-src="{{new.image}}" alt=""/>
+        </figure>
+      </a>
+      <div class="title padding-1em col-xs-10">
+        <h2>{{new.title}}</h2>
+      </div>
+    </div>
+    <div class="new-body row panel-collapse collapse" id="collapse{{$index}}" role="tabpanel" aria-labelledby="heading{{$index}}">
+      <figure class="col-md-4 col-xs-4" ng-style="{'background-image': 'url(' + new.image + ')'}"></figure>
+      <div class="body col-md-8 col-xs-8">
+        <h2>{{new.title}}</h2>
+        <p>
+          {{new.content}}
+        </p>
+      </div>
+    </div>
+  </article>
 </section>
