@@ -16,3 +16,7 @@ Running `gulp test` will run the unit tests with karma.
 Previamente correr los comandos `npm install` y `bower install`
 
 Correr desde la carpeta raiz del proyecto el siguente comando `python -m SimpleHTTPServer 9000`
+
+## Cambiar direccion del api
+
+En el archivo `rappidTest/app/scripts/constants.js` cambiar la url del archivo JSON por la direccion del API
