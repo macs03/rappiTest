@@ -6,8 +6,8 @@
 </div>
 <section class="news panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
   <article class="new panel" ng-repeat="new in main.news" ng-class="{'load-titles':main.loadTitles}">
-    <div class="new-header row panel-heading" role="tab" id="heading{{$index}}" ng-click="main.selectNew(new.id)">
-      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+    <div class="new-header row panel-heading" role="tab" id="heading{{$index}}">
+      <a class="collapsed" ng-click="main.selectNew(new.id)" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
         <figure class="padding-1em col-xs-2">
           <img ng-src="{{new.image}}" alt=""/>
         </figure>

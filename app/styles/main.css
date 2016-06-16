@@ -77,7 +77,6 @@ body {
   align-items: center;
   background: white;
   margin: 1em;
-  cursor: pointer;
 }
 .new-header figure img {
   width: 70px;
