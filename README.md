@@ -10,3 +10,7 @@ Run `gulp` for building and `gulp serve` for preview.
 ## Testing
 
 Running `gulp test` will run the unit tests with karma.
+
+## Probar localmente
+
+Correr desde la carpeta raiz del proyecto el siguente comando `python -m SimpleHTTPServer 9000`
