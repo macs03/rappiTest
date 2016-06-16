@@ -13,4 +13,6 @@ Running `gulp test` will run the unit tests with karma.
 
 ## Probar localmente
 
+Previamente correr los comandos `npm install` y `bower install`
+
 Correr desde la carpeta raiz del proyecto el siguente comando `python -m SimpleHTTPServer 9000`
